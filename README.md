@@ -1,4 +1,4 @@
-<h1>DNS Exercises</h1>
+<h1>DNS Exercises: Local Cache, A-Records, and CNAMES</h1>
 
 The purpose of this tutorial is to gain an understanding of some of the workings of DNS through concepts like A-records and CNAME records. We will also explore our local DNS cache and roothairs. This project was a follow up to the <a href = "https://github.com/telkheir/implementing-active-directory">implementing Active Directory in Azure</a> tutorial.
 
@@ -42,7 +42,7 @@ The purpose of this tutorial is to gain an understanding of some of the workings
           Forward Lookup Zones refer to hostname to IPv4 mapping
           Reverse Lookup Zones refer to IPv4 to hostname mapping
       </blockquote>
-      <br><br>
+      <br>
       Right click on your domain name and select New Host (A or AAAA). Name it 'Mainframe' and set the IP address to that of the DC-1 VM. 'Mainframe' should now be added to our domain's list of A-records. If we try to ping 'mainframe' from Client-1 once again, it will send data packets to the DC-1 VM.
           <br><br>
           [image - adding new arecord and/or pinging mainframe successfully]
