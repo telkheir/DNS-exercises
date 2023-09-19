@@ -47,8 +47,23 @@ The purpose of this tutorial is to gain an understanding of some of the workings
           <br><br>
           [image - adding new arecord and/or pinging mainframe successfully]
           <br><br>
-          Typing 'ipconfig / displaydns' into the command line will also give you a list of known hostnames and IPv4 addresses stroed on that device's local cache.
       </li>
-      <li><h3 id = "step_2">Lcal DNS Cache Exercise</h3></li>
+      <li><h3 id = "step_2">Lcal DNS Cache Exercise</h3>
+          Return to the DC-1 VM's list of A-Records and change the 'mainframe' IP address to 8.8.8.8. Back in the Client-1 VM, try to ping 'mainframe' once again. You should recieve information back from the old address (DC-1) because the data still exists on the local cache of Client-1. As previously mentioned, when looking up an address, the computer will first check the local cache, followed by the host file, and lastly the DNS. Since this DNS record exists in the local cache of Client-1, the computer will not continue on to check the host file or DNS for the updated IPv4 address of 'Mainframe'.
+          <br><br>
+          [image - changed a-record and client 1 cmd ping for old address]
+          <br><br>
+          We can observe our device's local DNS cache by typing "ipconfig/displaydns" into the command line.
+          <br><br>
+          [image - cmd local dns cache]
+          <br><br>
+          We need to clear the local cache of Client-1 so that it will check the DNS for the updated IP address of 'Mainframe'. To do so, type "ipconfig/flushdns" into the command line. You may need to have the command prompt open as an administrator.
+          <br><br>
+          [image - cmd flush local cache]
+          <br><br>
+          Observe the local DNS cache once again by typing "ipconfig/displaydns" into the command line and try to ping "mainframe" once again. The new address (8.8.8.8) should be used this time since there is no longer any record for 'mainframe' in our local cache for our device to default to.
+          <br><br>
+          [image - cmd, empty dns cache and pinging new address]
+      </li>
       <li><h3 id = "step_3">CNAME Record Exercise</h3></li>
     </ol>
