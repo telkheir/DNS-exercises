@@ -27,4 +27,6 @@ The purpose of this tutorial is to gain an understanding of some of the workings
     <ol>
       <li><h3 id = "step_1">A-Record Exercise</h3>
       </li>
+      <li><h3 id = "step_2">Lcal DNS Cache Exercise</h3></li>
+      <li><h3 id = "step_3">CNAME Record Exercise</h3></li>
     </ol>
