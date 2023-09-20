@@ -66,6 +66,16 @@ The purpose of this tutorial is to gain an understanding of some of the workings
           [image - cmd, empty dns cache and pinging new address]
       </li>
       <li><h3 id = "step_3">CNAME Record Exercise</h3>
-          A CNAME is a record that maps one domain name to another
+          A CNAME is a record that maps one domain name to another. In this last exercise, we will create a CNAME record that points any device in our domain to Google.com when we try to ping the word 'search'. First, let's test out what happens when we type 'ping search' in the command line of the Client-1 VM.
+          <br><br>
+          [image - failed ping of search cmd line]
+          <br><br>
+          We can see the ping fail because there is no hostname 'search' in our local cache, host file, or DNS. To set up this record, go to DC-1, right click on your domain name, and click "New Alias (CNAME)".
+          <br><br>
+          [image - highlight the proper links]
+          <br><br>
+          Set the name to 'search' and put Google down as the domain name. Return to the Client-1 device and type "ping search" into the command line again. Our newly made CNAME record should redirect the data packets to Google.com.
+          <br><br>
+          [image - successful ping]
       </li>
     </ol>
