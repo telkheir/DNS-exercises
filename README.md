@@ -27,12 +27,10 @@ The purpose of this tutorial is to gain an understanding of some of the workings
     <ol>
       <li><h3 id = "step_1">A-Record Exercise</h3>
           First we're going to use Remote Desktop to access both DC-1 and Client-1 as an admin. In my example, I logged in as tekdomain.com\tek_admin. We're going to try to ping 'mainframe' from the Client-1 VM. The Client-1 VM will first search the local cache for 'mainframe' but will not come up with anything. It will then search the host file, where it again should fail to find the domain name, before checking the DNS last. This ping should fail because 'mainframe' does not exist in our domain's records yet.
+          <br>
+          Using the 'nslookup' command will also fail because there is no DNS record.
           <br><br>
-          <img width="657" alt="dns-cmd-mainframe-fail" src="https://github.com/telkheir/DNS-exercises/assets/145223639/1b36f3bb-4cc2-4ca5-920e-86fa8adff25f">
-          <br><br>
-          In the command line type "nslookup mainframe". This should also fail because there is no DNS record.
-          <br><br>
-          [image - cmd line nslookup fail]
+          <img width="656" alt="dns-cmd-mainframe-fail" src="https://github.com/telkheir/DNS-exercises/assets/145223639/228328ce-5b40-4454-a58f-e8a94c639e5f">
           <br><br>
           Now we are going to switch to the DC-1 VM to register 'mainframe' as a domain name in our device and any other that may log into our domain. To do so, go to the Server Manager on DC-1 and in the top right corner, click on Tools to see a drop-down menu and select DNS. Double click DC-1 and enter your domain name to view a list of all of the device's A-records.
       <br><br>
