@@ -26,9 +26,9 @@ The purpose of this tutorial is to gain an understanding of some of the workings
 <h2>Tutorial</h2>
     <ol>
       <li><h3 id = "step_1">A-Record Exercise</h3>
-          First we're going to use Remote Desktop to access both DC-1 and Client-1 as an admin. In my example, I logged in as tekdomain.com\tek_admin. We're going to try to ping 'mainframe' from the Client-1 VM. The Client-1 VM will first search the local cache and when it cannot find the domain name there, it will then search the host file, where it again should fail to find the domain name, before it checks the DNS. This ping should fail because 'mainframe' does not exist in our domain's records yet.
+          First we're going to use Remote Desktop to access both DC-1 and Client-1 as an admin. In my example, I logged in as tekdomain.com\tek_admin. We're going to try to ping 'mainframe' from the Client-1 VM. The Client-1 VM will first search the local cache for 'mainframe' but will not come up with anything. It will then search the host file, where it again should fail to find the domain name, before checking the DNS last. This ping should fail because 'mainframe' does not exist in our domain's records yet.
           <br><br>
-          [image - cmd line fail]
+          <img width="657" alt="dns-cmd-mainframe-fail" src="https://github.com/telkheir/DNS-exercises/assets/145223639/1b36f3bb-4cc2-4ca5-920e-86fa8adff25f">
           <br><br>
           In the command line type "nslookup mainframe". This should also fail because there is no DNS record.
           <br><br>
