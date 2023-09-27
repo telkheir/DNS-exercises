@@ -32,12 +32,14 @@ The purpose of this tutorial is to gain an understanding of some of the workings
           <br><br>
           <img width="656" alt="dns-cmd-mainframe-fail" src="https://github.com/telkheir/DNS-exercises/assets/145223639/228328ce-5b40-4454-a58f-e8a94c639e5f">
           <br><br>
-          Now we are going to switch to the DC-1 VM to register 'mainframe' as a domain name in our device and any other that may log into our domain. To do so, go to the Server Manager on DC-1 and in the top right corner, click on Tools to see a drop-down menu and select DNS. Double click DC-1 and enter your domain name to view a list of all of the device's A-records.
+          Now we are going to switch to the DC-1 VM to register 'mainframe' as a domain name in our device and any other that may log into our domain. To do so, go to the Server Manager on DC-1 and in the top right corner, click on Tools to see a drop-down menu and select DNS. Click "DC-1", then "Forward Lookup Zones", and then click on your domain name to view a list of all of the device's A-records.
       <br><br>
-      [image - a-records in server manager]
-      <blockquote>
-           An A-record is a DNS record used to map a hostname to its respective IPv4 address.
-          Forward Lookup Zones refer to hostname to IPv4 mapping
+          
+https://github.com/telkheir/DNS-exercises/assets/145223639/97712cc9-9423-4433-b544-c78d74a0c05e     
+
+<blockquote>
+           An A-record is a DNS record used to map a hostname to its respective IPv4 address.<br>
+          Forward Lookup Zones refer to hostname to IPv4 mapping<br>
           Reverse Lookup Zones refer to IPv4 to hostname mapping
       </blockquote>
       <br>
