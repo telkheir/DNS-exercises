@@ -48,7 +48,7 @@ https://github.com/telkheir/DNS-exercises/assets/145223639/97712cc9-9423-4433-b5
           [image - adding new arecord and/or pinging mainframe successfully]
           <br><br>
       </li>
-      <li><h3 id = "step_2">Lcal DNS Cache Exercise</h3>
+      <li><h3 id = "step_2">Local DNS Cache Exercise</h3>
           Return to the DC-1 VM's list of A-Records and change the 'mainframe' IP address to 8.8.8.8. Back in the Client-1 VM, try to ping 'mainframe' once again. You should recieve information back from the old address (DC-1) because the data still exists on the local cache of Client-1. As previously mentioned, when looking up an address, the computer will first check the local cache, followed by the host file, and lastly the DNS. Since this DNS record exists in the local cache of Client-1, the computer will not continue on to check the host file or DNS for the updated IPv4 address of 'Mainframe'.
           <br><br>
           [image - changed a-record and client 1 cmd ping for old address]
