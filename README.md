@@ -2,7 +2,7 @@
 
 The purpose of this tutorial is to gain an understanding of some of the workings of DNS through concepts like A-records and CNAME records. We will also explore our local DNS cache and root hints. This project was a follow up to the <a href = "https://github.com/telkheir/implementing-active-directory">implementing Active Directory in Azure</a> tutorial.
 <br><br>
-Please note this tutorial is still a work in progress! The instructions are all there, but it needsa few more screenshots to polish it off.
+Please note this tutorial is still a work in progress! The instructions are all there, but it needs a few more screenshots to polish it off.
 
 
 <h2>Environments and Technologies Used</h2>
