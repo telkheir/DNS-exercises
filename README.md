@@ -34,7 +34,7 @@ Please note this tutorial is still a work in progress! The instructions are all 
           <br><br>
           <img width="656" alt="dns-cmd-mainframe-fail" src="https://github.com/telkheir/DNS-exercises/assets/145223639/228328ce-5b40-4454-a58f-e8a94c639e5f">
           <br><br>
-          Now we are going to switch to the DC-1 VM to register 'mainframe' as a domain name in our device and any other that may log into our domain. To do so, go to the Server Manager on DC-1 and in the top right corner, click on Tools to see a drop-down menu and select DNS. Click "DC-1", then "Forward Lookup Zones", and then click on your domain name to view a list of all of the device's A-records.
+          Now we are going to switch to the DC-1 VM to register 'mainframe' as a domain name in our device and any other that may log into our domain. To do so, go to the Server Manager on DC-1 and in the top right corner, click on Tools to see a drop-down menu and select DNS. Click "DC-1", then "Forward Lookup Zones", and then click on your domain name to view a list of all of the device's A-records. There should already be an A-record for the Client-1 and DC-1 devices.
       <br><br>
           
 https://github.com/telkheir/DNS-exercises/assets/145223639/97712cc9-9423-4433-b544-c78d74a0c05e     
@@ -47,7 +47,8 @@ https://github.com/telkheir/DNS-exercises/assets/145223639/97712cc9-9423-4433-b5
       <br>
       Right click on your domain name and select New Host (A or AAAA). Name it 'Mainframe' and set the IP address to that of the DC-1 VM. 'Mainframe' should now be added to our domain's list of A-records. If we try to ping 'mainframe' from Client-1 once again, it will send data packets to the DC-1 VM.
           <br><br>
-          [image - adding new arecord and/or pinging mainframe successfully]
+          <img width="567" alt="dns_manager" src="https://github.com/telkheir/DNS-exercises/assets/145223639/c2429be3-5764-46ec-b9b4-ac524ce749c4">
+          <img width="693" alt="dns-cmd-successful-mainframe-ping" src="https://github.com/telkheir/DNS-exercises/assets/145223639/8b2f48bd-2ff2-4446-80b5-6b76b3927bd5">
           <br><br>
       </li>
       <li><h3 id = "step_2">Local DNS Cache Exercise</h3>
