@@ -71,14 +71,15 @@ https://github.com/telkheir/DNS-exercises/assets/145223639/97712cc9-9423-4433-b5
       <li><h3 id = "step_3">CNAME Record Exercise</h3>
           A CNAME is a record that maps one domain name to another. In this last exercise, we will create a CNAME record that points any device in our domain to Google.com when we try to ping the word 'search'. First, let's test out what happens when we type 'ping search' in the command line of the Client-1 VM.
           <br><br>
-          [image - failed ping of search cmd line]
+          <img width="674" alt="dns-ping-search-fail" src="https://github.com/telkheir/DNS-exercises/assets/145223639/f53a20eb-3e8b-40dd-a720-2d4fd9d3c820">
           <br><br>
-          We can see the ping fail because there is no hostname 'search' in our local cache, host file, or DNS. To set up this record, go to DC-1, right click on your domain name, and click "New Alias (CNAME)".
+          We can see the ping fail because there is no hostname 'search' in our local cache, host file, or DNS. To set up this record, go to the DNS Mangager in DC-1, right click on your domain name in the Forward Lookup Zone folder, and click "New Alias (CNAME)".
           <br><br>
-          [image - highlight the proper links]
+          <img width="647" alt="dns-cname-nav" src="https://github.com/telkheir/DNS-exercises/assets/145223639/d30f65c3-2a53-4694-bfd6-8a6c6e5afc9c">
           <br><br>
           Set the name to 'search' and put Google down as the domain name. Return to the Client-1 device and type "ping search" into the command line again. Our newly made CNAME record should redirect the data packets to Google.com.
           <br><br>
-          [image - successful ping]
+          <img width="676" alt="dns-cname-setup" src="https://github.com/telkheir/DNS-exercises/assets/145223639/227d7993-30b5-488c-9dc0-a1b0b8ab7386">
+          <img width="674" alt="dns-ping-search" src="https://github.com/telkheir/DNS-exercises/assets/145223639/8db8d257-77a1-4cc7-a71c-3ed2da4d0b5f">
       </li>
     </ol>
