@@ -1,7 +1,7 @@
 <h1>DNS Exercises: Local Cache, A-Records, and CNAMES</h1>
 
 The purpose of this tutorial is to gain an understanding of some of the workings of DNS through concepts like A-records and CNAME records. We will also explore our local DNS cache and root hints. This project was a follow up to the <a href = "https://github.com/telkheir/implementing-active-directory">implementing Active Directory in Azure</a> tutorial.
-<br><br>
+<br>
 
 
 <h2>Environments and Technologies Used</h2>
