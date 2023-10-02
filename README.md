@@ -52,21 +52,21 @@ https://github.com/telkheir/DNS-exercises/assets/145223639/97712cc9-9423-4433-b5
           <br><br>
       </li>
       <li><h3 id = "step_2">Local DNS Cache Exercise</h3>
-          Return to the DC-1 VM's list of A-Records and change the 'mainframe' IP address to 8.8.8.8. Back in the Client-1 VM, try to ping 'mainframe' once again. You should recieve information back from the old address (DC-1) because the data still exists on the local cache of Client-1. As previously mentioned, when looking up an address, the computer will first check the local cache, followed by the host file, and lastly the DNS. Since this DNS record exists in the local cache of Client-1, the computer will not continue on to check the host file or DNS for the updated IPv4 address of 'Mainframe'.
+          Return to the DC-1 VM's list of A-Records and change the 'mainframe' IP address to 8.8.8.8. This can be done by right-clicking the A-record and selecting Properties. If we return to the Client-1 VM and try to ping 'mainframe' once again, we will recieve information back from the old address (DC-1) because the data still exists on the local cache of Client-1. As previously mentioned, when looking up an address, the computer will first check the local cache, followed by the host file, and lastly the DNS. Since this DNS record exists in the local cache of Client-1, the computer will not continue on to check the host file or DNS for the updated IPv4 address of 'Mainframe'.
           <br><br>
-          [image - changed a-record and client 1 cmd ping for old address]
+          <img width="816" alt="dns-mainframe-reassignment" src="https://github.com/telkheir/DNS-exercises/assets/145223639/637259a4-19f7-4b68-8884-24cb5c6b5f12">
           <br><br>
-          We can observe our device's local DNS cache by typing "ipconfig/displaydns" into the command line.
+          We can observe our device's local DNS cache by typing "ipconfig/displaydns" into the command line. Here we see that 'mainframe' is still associated with the IP address of DC-1.
           <br><br>
-          [image - cmd local dns cache]
+          <img width="678" alt="dns-cache-client-1" src="https://github.com/telkheir/DNS-exercises/assets/145223639/a0bdf0d6-353e-4d08-b500-aa341fc69b86">
           <br><br>
-          We need to clear the local cache of Client-1 so that it will check the DNS for the updated IP address of 'Mainframe'. To do so, type "ipconfig/flushdns" into the command line. You may need to have the command prompt open as an administrator.
+          We need to clear the local cache of Client-1 so that it will check the DNS for the updated IP address of 'mainframe'. To do so, type "ipconfig/flushdns" into the command line. You will need to have the command prompt open as an administrator.
           <br><br>
-          [image - cmd flush local cache]
+          <img width="675" alt="dns-flush-cache" src="https://github.com/telkheir/DNS-exercises/assets/145223639/5bde58e3-e2dd-4cd9-8dd1-144124fd93f8">
           <br><br>
           Observe the local DNS cache once again by typing "ipconfig/displaydns" into the command line and try to ping "mainframe" once again. The new address (8.8.8.8) should be used this time since there is no longer any record for 'mainframe' in our local cache for our device to default to.
           <br><br>
-          [image - cmd, empty dns cache and pinging new address]
+          <img width="674" alt="dns-flushed-cache-mainframe" src="https://github.com/telkheir/DNS-exercises/assets/145223639/ff1b8828-7052-48e7-9893-6ebd69f3ace9">
       </li>
       <li><h3 id = "step_3">CNAME Record Exercise</h3>
           A CNAME is a record that maps one domain name to another. In this last exercise, we will create a CNAME record that points any device in our domain to Google.com when we try to ping the word 'search'. First, let's test out what happens when we type 'ping search' in the command line of the Client-1 VM.
